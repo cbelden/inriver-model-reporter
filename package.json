@@ -1,0 +1,22 @@
+{
+  "name": "pim-model-reporter",
+  "version": "0.0.0",
+  "description": "",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD",
+  "dependencies": {
+    "q": "~1.0.1",
+    "ramda": "~0.5.0",
+    "xml2js": "~0.4.4",
+    "eyes": "~0.1.8"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.8",
+    "gulp-download-atom-shell": "0.0.4",
+    "fs-extra": "~0.12.0"
+  }
+}

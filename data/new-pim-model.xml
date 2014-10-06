@@ -1,0 +1,4364 @@
+<Model>
+  <Languages>
+    <Language masterLanguage="1">en</Language>
+  </Languages>
+  <ServerSettings>
+    <ServerSetting>
+      <Key>MASTER_LANGUAGE</Key>
+      <Value>en</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>PRINT_PLUGIN_MODEL_LANGUAGE</Key>
+      <Value>en</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>SERVER_NAME</Key>
+      <Value>Phase II Development Server</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>INTEGRATION_ENABLED</Key>
+      <Value>true</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>INTEGRATION_QUEUE_NAME</Key>
+      <Value>inriver_outbound_integration_queue</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>SEARCH_SUGGESTION_FIELDS</Key>
+      <Value>ResourceFilename</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>SEARCH_SUGGESTION_COUNT</Key>
+      <Value>5</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>SEARCH_SUGGESTION_MAX_LENGTH</Key>
+      <Value>50</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>DEFAULT_CREATE_ENTITIES</Key>
+      <Value>Resource,Series,Author</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>ASSORTMENT_STRUCTURE_ROOTS</Key>
+      <Value />
+    </ServerSetting>
+    <ServerSetting>
+      <Key>LIGHTBOARD_IMAGE_CONFIGURATION</Key>
+      <Value>Thumbnail</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>ADMINISTRATION_ROOT_URL</Key>
+      <Value>http://localhost/admin/</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>PRINT_AVAILABLE_ENTITYTYPES</Key>
+      <Value>Product,Item,Resource</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>SPECIFICATION_ADDITIONAL_DATA_CVL</Key>
+      <Value />
+    </ServerSetting>
+    <ServerSetting>
+      <Key>SPECIFICATION_ADDITIONAL_DATA_MULTIVALUE</Key>
+      <Value>false</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>AUTHENTICATION_TYPE</Key>
+      <Value>Mixed</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>ACTIVE_DIRECTORY_CONNECTION_STRING</Key>
+      <Value>LDAP://aapdomain.local</Value>
+    </ServerSetting>
+    <ServerSetting>
+      <Key>PRINT_AUTHENTICATION_ENABLED</Key>
+      <Value>false</Value>
+    </ServerSetting>
+  </ServerSettings>
+  <CVLs>
+    <CVL>
+      <Id>Audience</Id>
+      <DataType>String</DataType>
+      <ParentId />
+      <CustomValueList>False</CustomValueList>
+    </CVL>
+    <CVL>
+      <Id>BookType</Id>
+      <DataType>String</DataType>
+      <ParentId />
+      <CustomValueList>False</CustomValueList>
+    </CVL>
+    <CVL>
+      <Id>Categories</Id>
+      <DataType>String</DataType>
+      <ParentId />
+      <CustomValueList>False</CustomValueList>
+    </CVL>
+    <CVL>
+      <Id>Category</Id>
+      <DataType>LocaleString</DataType>
+      <ParentId />
+      <CustomValueList>False</CustomValueList>
+    </CVL>
+    <CVL>
+      <Id>ResourceType</Id>
+      <DataType>String</DataType>
+      <ParentId />
+      <CustomValueList>False</CustomValueList>
+    </CVL>
+    <CVL>
+      <Id>TaskStatus</Id>
+      <DataType>String</DataType>
+      <ParentId />
+      <CustomValueList>False</CustomValueList>
+    </CVL>
+  </CVLs>
+  <Categories>
+    <Category>
+      <Id>Book</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Book]]>
+          </value>
+        </string>
+      </Name>
+      <Index>2</Index>
+    </Category>
+    <Category>
+      <Id>Credit</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Credit]]>
+          </value>
+        </string>
+      </Name>
+      <Index>1</Index>
+    </Category>
+    <Category>
+      <Id>General</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[General]]>
+          </value>
+        </string>
+      </Name>
+      <Index>0</Index>
+    </Category>
+    <Category>
+      <Id>Subscription</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Subscription]]>
+          </value>
+        </string>
+      </Name>
+      <Index>3</Index>
+    </Category>
+  </Categories>
+  <EntityTypes>
+    <EntityType>
+      <Id>Assortment</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Assortment]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>AssortmentName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Author</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Author]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>AuthorBio</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Bio]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>AuthorName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>AuthorOf</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Author Of]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>True</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>AuthorOfDescription</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Description]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>AuthorOfRole</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Role]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>True</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Channel</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Channel]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>ChannelDefaultLanguage</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Default Language]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue>en</DefaultValue>
+          <Index>3</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ChannelName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ChannelPublished</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Published]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue>false</DefaultValue>
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>True</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>ChannelNode</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Node]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>ChannelNodeName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>True</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Item</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Item]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>ItemAboutTheEditors</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[About the Editors]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>62</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>ItemAppStore</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[App Store URL]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>17</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemAudience</Id>
+          <DataType>CVL</DataType>
+          <CVLId>Audience</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Audience]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>57</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>True</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemAuthor</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Author Byline]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>58</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemBackorderable</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Backorderable]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>7</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemBestseller</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Bestseller]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>61</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemBookType</Id>
+          <DataType>CVL</DataType>
+          <CVLId>BookType</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Format]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>21</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCategory</Id>
+          <DataType>CVL</DataType>
+          <CVLId>Category</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Type]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>4</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditAAFPPrescribed</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[AAFP Prescribed Credit]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>26</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditAAP</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[AAP Credit]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>23</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditAMAPRCategory1</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[AMA PRA Category 1 Credit(s)]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>24</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditExpirationDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Credit Expiration Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>43</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditMiscAmount</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Misc Credit Amount]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>30</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditMiscTitle</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Misc Credit Title]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>29</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditMOCPart2</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[MOC Part 2 Credit]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>27</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditMOCPart4</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[MOC Part 4 Credit]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>28</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemCreditNAPNAP</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[NAPNAP Credit]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Credit</CategoryId>
+          <DefaultValue />
+          <Index>25</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemDeliveryInfo</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Delivery Info]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>47</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemDescription</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Description]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>41</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>ItemDiscontinued</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Discontinued]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>6</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemDownloadURL</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Download URL]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>37</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemEbookURL</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[eBook URL]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>36</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>True</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemEndDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[End Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>14</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemExternalUrl</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[External Url]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>66</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemFeedbackEmail</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Feedback Email Address]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>65</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemGooglePlay</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Google Play URL]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>18</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemHeight</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Height (in.)]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>34</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemIllustrations</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Illustrations]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>39</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemImpactFactor</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Impact Factor]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>20</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemISBN13</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[ISBN]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>40</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemISSNOnline</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[ISSN Online]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>49</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemISSNPrint</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[ISSN Print]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>48</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemKeywords</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Keywords]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>54</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemLanguage</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Language]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>31</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemLength</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Length (in.)]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>33</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemLookInside</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Look Inside URL]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>19</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemMemberPrice</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Member Price]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>11</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>3</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemNewUntil</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[New Until]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>56</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemNumber</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Item Number]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>True</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>True</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemOnlineAccessLink1</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Online Access Link 1]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>51</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemOnlineAccessLink2</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Online Access Link 2]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>53</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemOnlineAccessTitle1</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Online Access Title 1]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>50</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemOnlineAccessTitle2</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Online Access Title 2]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>52</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemPages</Id>
+          <DataType>Integer</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Pages]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>38</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemPeerReviewed</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Peer Reviewed]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>60</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemPreorderDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Preorder Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>16</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemPublishFrequency</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Publish Frequency]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>44</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemRemoveFromWebDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Remove From Web Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>15</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemRetailPrice</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Retail Price]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>10</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemSellOnline</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Sell Online]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue>False</DefaultValue>
+          <Index>5</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemShowGuarantee</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Show Guarantee]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>64</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemShowInventory</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Show Inventory]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>8</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemShowSiteLicense</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Show Site License]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>63</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemSKU</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[SKU]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemSpecialOffer</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Special Offer]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>55</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemStartDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Start Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>13</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemSubscriptionDuration</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Subscription Duration]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>42</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemSubscriptionTerm</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Subscription Term]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>46</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemSubscriptionType</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Subscription Type]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>45</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemSubtitle</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Subtitle]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>59</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemTaxable</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Taxable]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>9</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemWeight</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Weight (lbs.)]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>35</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemWhatPeopleAreSaying</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[What People Are Saying]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>12</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>ItemWidth</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Width (in).]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>32</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ItemPublicationDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Publication Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>22</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Package</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Package]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>PackageAppStore</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[App Store Url]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>16</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageAudience</Id>
+          <DataType>CVL</DataType>
+          <CVLId>Audience</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Audience ]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>9</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>True</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageBackorderable</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Backorderable]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>13</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageDepartment</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Department]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>7</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageDescription</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Description]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>5</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>PackageDiscontinued</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Discontinued]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>12</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageEndDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[End Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>23</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageGooglePlay</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Google Play Url]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>17</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageHealthyChildren</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Healthy Children]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>20</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageKeywords</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Keywords]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>10</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageMemberPrice</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Member Price]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>19</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageNewUntil</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[New Until]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>21</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageNumber</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Package Number]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>True</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>True</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackagePrimaryCategory</Id>
+          <DataType>CVL</DataType>
+          <CVLId>Categories</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Primary Category]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>8</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageRemoveFromWebDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Remove From Web Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>24</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageRetailPrice</Id>
+          <DataType>Double</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Retail Price]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>18</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageSellOnline</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Sell Online]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>11</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageShowInventory</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Show Inventory]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>14</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageSKU</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[SKU]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>4</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageStartDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Start Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>22</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageSubtitle</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Subtitle]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>3</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageTaxable</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Taxable]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>15</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>PackageWhatPeopleAreSaying</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[What People are Saying]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>6</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Product</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Product]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>ProductAboutTheEditors</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[About the Editors]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>20</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>ProductAudience</Id>
+          <DataType>CVL</DataType>
+          <CVLId>Audience</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Audience]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>11</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>True</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductAuthor</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Author Byline]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>12</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductBestseller</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Bestseller]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>16</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductDepartment</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Department]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>4</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductDescription</Id>
+          <DataType>LocaleString</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Description]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings>
+            <Setting>
+              <SettingsKey>AdvancedTextObject</SettingsKey>
+              <SettingsValue>1</SettingsValue>
+            </Setting>
+          </Settings>
+        </FieldType>
+        <FieldType>
+          <Id>ProductHealthyChildren</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Healthy Children]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue>False</DefaultValue>
+          <Index>5</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductKeywords</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Keywords]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>3</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>True</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductNewUntil</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[New Until]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>7</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductNumber</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Product Number]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>True</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>True</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductOnlineAbstract</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Online Abstract]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>9</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductOnlineDescription</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Online Description]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>8</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductPeerReviewed</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Peer Reviewed]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>15</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductPrimaryCategory</Id>
+          <DataType>CVL</DataType>
+          <CVLId>Categories</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Primary Category]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>10</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductProvider</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Provider]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>14</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductPublisher</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Publisher]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Book</CategoryId>
+          <DefaultValue />
+          <Index>17</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductShowGuarantee</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Show Guarantee]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>20</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductShowSiteLicense</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Show Site License]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>Subscription</CategoryId>
+          <DefaultValue />
+          <Index>19</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductSpecialOffer</Id>
+          <DataType>Boolean</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Special Offer]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>6</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ProductSubtitle</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Subtitle]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>13</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Publication</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Publication]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>PublicationName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Resource</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Resource]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>ResourceFileId</Id>
+          <DataType>File</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[File Id]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>3</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ResourceFilename</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Filename]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>4</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ResourceMimeType</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Mime Type]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>6</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ResourceName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Alt Text]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ResourceThumbnailId</Id>
+          <DataType>Integer</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Thumbnail Id]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>7</Index>
+          <Hidden>True</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>True</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ResourceType</Id>
+          <DataType>CVL</DataType>
+          <CVLId>ResourceType</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Resource Type]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>True</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>ResourceUrl</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Url]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>5</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>True</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Section</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Section]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>SectionId</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Id]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>True</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>True</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>SectionName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>True</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Series</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Series]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>SeriesName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+    <EntityType>
+      <Id>Task</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Task]]>
+          </value>
+        </string>
+      </Name>
+      <IsLinkEntityType>False</IsLinkEntityType>
+      <FieldTypes>
+        <FieldType>
+          <Id>TaskDescription</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Description]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>2</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>True</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>TaskDueDate</Id>
+          <DataType>DateTime</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Due Date]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>6</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>TaskName</Id>
+          <DataType>String</DataType>
+          <CVLId />
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Name]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>1</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>True</IsDisplayName>
+          <Mandatory>True</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+        <FieldType>
+          <Id>TaskStatus</Id>
+          <DataType>CVL</DataType>
+          <CVLId>TaskStatus</CVLId>
+          <Name>
+            <string>
+              <value language="en">
+                <![CDATA[Status]]>
+              </value>
+            </string>
+          </Name>
+          <CategoryId>General</CategoryId>
+          <DefaultValue />
+          <Index>5</Index>
+          <Hidden>False</Hidden>
+          <ExcludeFromDefaultView>False</ExcludeFromDefaultView>
+          <IsDisplayDescription>False</IsDisplayDescription>
+          <IsDisplayName>False</IsDisplayName>
+          <Mandatory>False</Mandatory>
+          <Multivalue>False</Multivalue>
+          <ReadOnly>False</ReadOnly>
+          <Unique>False</Unique>
+          <Settings />
+        </FieldType>
+      </FieldTypes>
+    </EntityType>
+  </EntityTypes>
+  <LinkTypes>
+    <LinkType>
+      <Id>AssortmentAssortment</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Assortment</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Assortments]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Assortment</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Assortments]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>AssortmentProduct</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Assortment</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Products]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Product</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Assortments]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>AuthorResource</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Author</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Resources]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Resource</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Authors]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ChannelChannelNode</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Channel</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Categories]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>ChannelNode</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Channels]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ChannelNodeAuthor</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>ChannelNode</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Authors]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Author</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Categories]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ChannelNodeChannelNode</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>ChannelNode</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Nodes]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>ChannelNode</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Categories]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ChannelNodePackage</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>ChannelNode</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Packages]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Package</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Categories]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ChannelNodeProduct</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>ChannelNode</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Products]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Product</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Categories]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ChannelNodeSeries</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>ChannelNode</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Series]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Series</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Categories]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ItemAuthor</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId>AuthorOf</LinkEntityTypeId>
+      <SourceEntityTypeId>Item</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Authors]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Author</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Items]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ItemCrossSell</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Item</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Cross Sells]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Item</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Cross Sells]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ItemPackageCrossSell</Id>
+      <Index>2</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Item</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Package Cross Sells]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Package</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Item Cross Sells]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ItemPackageUpSell</Id>
+      <Index>2</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Item</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Package Up Sells]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Package</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Item Up Sells]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ItemResource</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Item</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Resources]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Resource</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Items]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ItemUpSell</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Item</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Up Sells]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Item</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Up Sells]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>PackageCrossSell</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Package</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Package Cross Sells]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Package</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Package Cross Sells]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>PackageItem</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Package</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Items in Package]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Item</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Member of Packages]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>PackageResource</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Package</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Resources]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Resource</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Packages]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>PackageUpSell</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Package</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Package Up Sells]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Package</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Package Up Sells]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ProductItem</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Product</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Items]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Item</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Products]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ProductResource</Id>
+      <Index>1</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Product</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Resources]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Resource</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Products]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>PublicationSection</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Publication</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Sections]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Section</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Publications]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ResourceResource</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Resource</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Full Resources]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Resource</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Thumbnails]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>SectionProducts</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Section</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Products]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Product</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Sections]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>SectionSection</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Section</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Sections]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Section</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Sections]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>SeriesItem</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Series</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Items]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Item</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[In Series]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>SeriesPackage</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Series</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Packages]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Package</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[In Series]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>TaskProduct</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Task</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Products]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Product</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Tasks]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+    <LinkType>
+      <Id>ItemPrepPart</Id>
+      <Index>0</Index>
+      <LinkEntityTypeId />
+      <SourceEntityTypeId>Item</SourceEntityTypeId>
+      <SourceName>
+        <string>
+          <value language="en">
+            <![CDATA[Call Out PREP Component]]>
+          </value>
+        </string>
+      </SourceName>
+      <TargetEntityTypeId>Item</TargetEntityTypeId>
+      <TargetName>
+        <string>
+          <value language="en">
+            <![CDATA[Called Out By PREP Component]]>
+          </value>
+        </string>
+      </TargetName>
+    </LinkType>
+  </LinkTypes>
+  <FieldSets>
+    <FieldSet>
+      <Id>ItemBook</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Book]]>
+          </value>
+        </string>
+      </Name>
+      <Description>
+        <string />
+      </Description>
+      <EntityTypeId>Item</EntityTypeId>
+      <FieldTypes>
+        <FieldTypeId>ItemBestseller</FieldTypeId>
+        <FieldTypeId>ItemDownloadURL</FieldTypeId>
+        <FieldTypeId>ItemHeight</FieldTypeId>
+        <FieldTypeId>ItemIllustrations</FieldTypeId>
+        <FieldTypeId>ItemISBN13</FieldTypeId>
+        <FieldTypeId>ItemLanguage</FieldTypeId>
+        <FieldTypeId>ItemLength</FieldTypeId>
+        <FieldTypeId>ItemPages</FieldTypeId>
+        <FieldTypeId>ItemPeerReviewed</FieldTypeId>
+        <FieldTypeId>ItemWeight</FieldTypeId>
+        <FieldTypeId>ItemWidth</FieldTypeId>
+      </FieldTypes>
+    </FieldSet>
+    <FieldSet>
+      <Id>ItemEbook</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[eBook]]>
+          </value>
+        </string>
+      </Name>
+      <Description>
+        <string />
+      </Description>
+      <EntityTypeId>Item</EntityTypeId>
+      <FieldTypes>
+        <FieldTypeId>ItemBestseller</FieldTypeId>
+        <FieldTypeId>ItemIllustrations</FieldTypeId>
+        <FieldTypeId>ItemISBN13</FieldTypeId>
+        <FieldTypeId>ItemLanguage</FieldTypeId>
+        <FieldTypeId>ItemPeerReviewed</FieldTypeId>
+      </FieldTypes>
+    </FieldSet>
+    <FieldSet>
+      <Id>ItemSubscription</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Subscription]]>
+          </value>
+        </string>
+      </Name>
+      <Description>
+        <string />
+      </Description>
+      <EntityTypeId>Item</EntityTypeId>
+      <FieldTypes>
+        <FieldTypeId>ItemAboutTheEditors</FieldTypeId>
+        <FieldTypeId>ItemBestseller</FieldTypeId>
+        <FieldTypeId>ItemCreditExpirationDate</FieldTypeId>
+        <FieldTypeId>ItemDeliveryInfo</FieldTypeId>
+        <FieldTypeId>ItemDescription</FieldTypeId>
+        <FieldTypeId>ItemFeedbackEmail</FieldTypeId>
+        <FieldTypeId>ItemISSNOnline</FieldTypeId>
+        <FieldTypeId>ItemISSNPrint</FieldTypeId>
+        <FieldTypeId>ItemOnlineAccessLink1</FieldTypeId>
+        <FieldTypeId>ItemOnlineAccessLink2</FieldTypeId>
+        <FieldTypeId>ItemOnlineAccessTitle1</FieldTypeId>
+        <FieldTypeId>ItemOnlineAccessTitle2</FieldTypeId>
+        <FieldTypeId>ItemPeerReviewed</FieldTypeId>
+        <FieldTypeId>ItemPublishFrequency</FieldTypeId>
+        <FieldTypeId>ItemShowGuarantee</FieldTypeId>
+        <FieldTypeId>ItemShowSiteLicense</FieldTypeId>
+        <FieldTypeId>ItemSubscriptionDuration</FieldTypeId>
+        <FieldTypeId>ItemSubscriptionTerm</FieldTypeId>
+        <FieldTypeId>ItemSubscriptionType</FieldTypeId>
+      </FieldTypes>
+    </FieldSet>
+    <FieldSet>
+      <Id>ProductBook</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Book]]>
+          </value>
+        </string>
+      </Name>
+      <Description>
+        <string />
+      </Description>
+      <EntityTypeId>Product</EntityTypeId>
+      <FieldTypes>
+        <FieldTypeId>ProductProvider</FieldTypeId>
+        <FieldTypeId>ProductPublisher</FieldTypeId>
+      </FieldTypes>
+    </FieldSet>
+    <FieldSet>
+      <Id>ProductSubscription</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Subscription]]>
+          </value>
+        </string>
+      </Name>
+      <Description>
+        <string />
+      </Description>
+      <EntityTypeId>Product</EntityTypeId>
+      <FieldTypes>
+        <FieldTypeId>ProductAboutTheEditors</FieldTypeId>
+        <FieldTypeId>ProductShowGuarantee</FieldTypeId>
+        <FieldTypeId>ProductShowSiteLicense</FieldTypeId>
+      </FieldTypes>
+    </FieldSet>
+    <FieldSet>
+      <Id>ResourceFileFieldset</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[File]]>
+          </value>
+        </string>
+      </Name>
+      <Description>
+        <string />
+      </Description>
+      <EntityTypeId>Resource</EntityTypeId>
+      <FieldTypes>
+        <FieldTypeId>ResourceFilename</FieldTypeId>
+        <FieldTypeId>ResourceMimeType</FieldTypeId>
+      </FieldTypes>
+    </FieldSet>
+    <FieldSet>
+      <Id>ResourceUrlFieldset</Id>
+      <Name>
+        <string>
+          <value language="en">
+            <![CDATA[Url]]>
+          </value>
+        </string>
+      </Name>
+      <Description>
+        <string />
+      </Description>
+      <EntityTypeId>Resource</EntityTypeId>
+      <FieldTypes>
+        <FieldTypeId>ResourceUrl</FieldTypeId>
+      </FieldTypes>
+    </FieldSet>
+  </FieldSets>
+  <FieldViews />
+</Model>
