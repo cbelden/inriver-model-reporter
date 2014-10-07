@@ -1,6 +1,8 @@
 /* ==== Includes ==== */
 var app = require('app');
-var BrowserWindow = require('browser-window');
+var browserWindow = require('browser-window');
+var globalShortcut = require('global-shortcut');
+var dialog = require('dialog');
 
 var mainWindow = null;
 
@@ -10,14 +12,45 @@ app.on('window-all-closed', function() {
 });
 
 app.on('ready', function() {
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new browserWindow({
+    width: 800,
+    height: 600,
+    title: "PIM Model Reporter"
+  });
+
   mainWindow.loadUrl('file://' + __dirname + '/ui/index.html');
 
   mainWindow.on('closed', function() {
     mainWindow = null;
   });
-});
 
+  globalShortcut.register('ctrl+alt+i',
+    mainWindow.toggleDevTools.bind(mainWindow)
+  );
+
+  mainWindow.on('openPreviousModelDialog', function (event) {
+    dialog.showOpenDialog(mainWindow,
+      {
+          'title': "Select Previous Model File"
+      },
+      function (filePaths) {
+        //TODO
+        event.sender.send('selectedPreviousModel', R.head(filePaths));
+      });
+  });
+
+  mainWindow.on('openCurrentModelDialog', function (event) {
+    dialog.showOpenDialog(mainWindow,
+    {
+        'title': "Select Current Model File"
+    },
+    function (filePaths) {
+      //TODO
+      event.sender.send('selectedCurrentModel', R.head(filePaths));
+    });
+  });
+
+});
 
 // var Q = require('q');
 // var R = require('ramda');
