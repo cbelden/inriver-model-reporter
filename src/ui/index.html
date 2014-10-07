@@ -11,8 +11,8 @@
       <div class="field">
         <label>Previous Model</label>
         <div class="ui action input">
-          <input type="text" placeholder="Select a File..." disabled data-id="previousModelText">
-          <div class="ui icon button" data-id="previousModelButton">
+          <input type="text" placeholder="Select a File..." readonly data-id="txtPreviousModel">
+          <div class="ui icon button" data-id="btnPreviousModel">
             <i class="text file icon"></i>
           </div>
         </div>
@@ -20,14 +20,18 @@
       <div class="field">
         <label>Current Model</label>
         <div class="ui action input">
-          <input type="text" placeholder="Select a File..." disabled data-id="currentModelText">
-          <div class="ui icon button" data-id="currentModelButton">
+          <input type="text" placeholder="Select a File..." readonly data-id="txtCurrentModel">
+          <div class="ui icon button" data-id="btnCurrentModel">
             <i class="text file icon"></i>
           </div>
         </div>
       </div>
+      <div class="ui button" data-id="btnPerformDiff">
+        Perform Diff
+      </div>
     </div>
-
+    <pre class="ui message" data-id="pnlDiffResults">
+    </pre>
 </body>
 
 </html>
