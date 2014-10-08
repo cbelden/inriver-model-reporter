@@ -7,7 +7,8 @@ var spawn = require('child_process').spawn;
 /* ==== Config ==== */
 var BOWER_LIBS = {
   'jquery': "bower_components/jquery/dist/",
-  'semantic-ui': "bower_components/semantic-ui/build/packaged/"
+  'semantic-ui': "bower_components/semantic-ui/build/packaged/",
+  'angular': "bower_components/angular/"
 };
 var SOURCE_CODE_DIR = "src/";
 var SOURCE_CODE_LIB_DIR = SOURCE_CODE_DIR + "lib/";

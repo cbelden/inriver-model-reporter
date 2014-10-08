@@ -1,18 +1,21 @@
-<html>
+<html ng-app="modelReporterApp">
 <head>
   <link rel="stylesheet" type="text/css" href="../lib/semantic-ui/css/semantic.css">
   <link rel="stylesheet" type="text/css" href="index.css">
+
+  <script src="../lib/angular/angular.js"></script>
   <script src="index.js"></script>
+  <script src="controllers.js"></script>
 </head>
 
-<body>
+<body ng-controller="modelReporterCtrl">
 
     <div class="ui form segment">
       <div class="field">
         <label>Previous Model</label>
         <div class="ui action input">
-          <input type="text" placeholder="Select a File..." readonly data-id="txtPreviousModel">
-          <div class="ui icon button" data-id="btnPreviousModel">
+          <input type="text" placeholder="Select a File..." readonly ng-model="previousModelFilename">
+          <div class="ui icon button" ng-click="choosePreviousModel()">
             <i class="text file icon"></i>
           </div>
         </div>
@@ -20,17 +23,18 @@
       <div class="field">
         <label>Current Model</label>
         <div class="ui action input">
-          <input type="text" placeholder="Select a File..." readonly data-id="txtCurrentModel">
-          <div class="ui icon button" data-id="btnCurrentModel">
+          <input type="text" placeholder="Select a File..." readonly ng-model="currentModelFilename">
+          <div class="ui icon button" ng-click="chooseCurrentModel()">
             <i class="text file icon"></i>
           </div>
         </div>
       </div>
-      <div class="ui button" data-id="btnPerformDiff">
+      <div class="ui button" ng-click="performDiff()">
         Perform Diff
       </div>
     </div>
-    <pre class="ui message" data-id="pnlDiffResults">
+    <pre class="ui message">
+      {{diffResults}}
     </pre>
 </body>
 
