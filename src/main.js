@@ -22,7 +22,7 @@ app.on('ready', function() {
   mainWindow = new browserWindow({
     width: 800,
     height: 600,
-    title: "PIM Model Reporter"
+    title: "inRiver Model Reporter"
   });
 
   mainWindow.loadUrl('file://' + __dirname + '/ui/index.html');
@@ -38,39 +38,9 @@ app.on('ready', function() {
 
 
 /* ==== IPC Handlers ==== */
-var appState = {
-  previousModelFilePath: "",
-  currentModelFilePath: ""
-}
-var modelSelectionDialogOptions = {
-    'title': "Select Model File",
-    'filters': [
-      {
-        'name': 'Model Files',
-        'extensions': ['xml']
-      }
-    ],
-    'multiSelections': false
-};
 
-ipc.on('openPreviousModelDialog', function (event) {
-  dialog.showOpenDialog(mainWindow, modelSelectionDialogOptions,
-    function (filePaths) {
-      appState.previousModelFilePath = R.head(filePaths);
-      event.sender.send('selectedPreviousModel', appState.previousModelFilePath);
-    });
-});
-
-ipc.on('openCurrentModelDialog', function (event) {
-  dialog.showOpenDialog(mainWindow, modelSelectionDialogOptions,
-  function (filePaths) {
-    appState.currentModelFilePath = R.head(filePaths);
-    event.sender.send('selectedCurrentModel', appState.currentModelFilePath);
-  });
-});
-
-ipc.on('performDiff', function (event) {
-  modelDiff.diffModels(appState.previousModelFilePath, appState.currentModelFilePath)
+ipc.on('performDiff', function (event, args) {
+  modelDiff.diffModels(args.previousModelFilename, args.currentModelFilename)
     .then(
       event.sender.send.bind(event.sender, 'returnDiffResults')
     );

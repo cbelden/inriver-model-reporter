@@ -6,29 +6,22 @@
   <script src="../lib/angular/angular.js"></script>
   <script src="index.js"></script>
   <script src="controllers.js"></script>
+  <script src="directives.js"></script>
 </head>
 
 <body ng-controller="modelReporterCtrl">
 
     <div class="ui form segment">
-      <div class="field">
-        <label>Previous Model</label>
-        <div class="ui action input">
-          <input type="text" placeholder="Select a File..." readonly ng-model="previousModelFilename">
-          <div class="ui icon button" ng-click="choosePreviousModel()">
-            <i class="text file icon"></i>
-          </div>
-        </div>
-      </div>
-      <div class="field">
-        <label>Current Model</label>
-        <div class="ui action input">
-          <input type="text" placeholder="Select a File..." readonly ng-model="currentModelFilename">
-          <div class="ui icon button" ng-click="chooseCurrentModel()">
-            <i class="text file icon"></i>
-          </div>
-        </div>
-      </div>
+      <file-input
+        label="Previous Model"
+        filename="previousModelFilename"
+        dialog-options="fileDialogOptions">
+      </file-input>
+      <file-input
+        label="Current Model"
+        filename="currentModelFilename"
+        dialog-options="fileDialogOptions">
+      </file-input>
       <div class="ui button" ng-click="performDiff()">
         Perform Diff
       </div>
