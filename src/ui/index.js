@@ -5,3 +5,7 @@ var $ = require('../lib/jquery/jquery');
  */
 window.jQuery = window.$ = $;
 require('../lib/semantic-ui/javascript/semantic.js');
+
+$(document).ready(function () {
+  $('.ui.accordion').accordion();
+})

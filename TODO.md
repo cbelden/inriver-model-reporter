@@ -9,7 +9,7 @@
 
 # Long Term Todos:
 
-* Support fieldsets
+* Support CVls
   * Set up diffs
   * Unit tests
   * Design UI
