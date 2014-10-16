@@ -16,12 +16,24 @@ var loadEntityVersions = function (previousFileName, currentFileName) {
 }
 
 /**
+ * Returns a pruned diff for the two passed models
+ **/
+var getPrunedDiff = R.pipe(
+    diffTools.diffObjects,
+    diffTools.pruneDiff
+);
+
+var getDiffFields = function (previousModel, currentModel) {
+  var diff = getPrunedDiff(previousModel, currentModel);
+  return diff;
+}
+
+/**
  * Performs a diff of the two files, returing the result
  **/
 var diffModels = function (previousModelFilePath, currentModelFilePath) {
   return loadEntityVersions(previousModelFilePath, currentModelFilePath)
-    .spread(diffTools.diffObjects)
-    .then(diffTools.pruneDiff)
+    .spread(getDiffFields)
 }
 
 
