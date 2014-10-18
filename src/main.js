@@ -11,10 +11,9 @@ var modelDiff = require('./diffTools/modelDiff');
 // Maintain the BrowserWindow object as a global so it isn't garbage collected.
 var mainWindow = null;
 
-// Mac's dont quit. byah.
+// Make sure we close the app
 app.on('window-all-closed', function() {
-  if (process.platform != 'darwin')
-    app.quit();
+  app.quit();
 });
 
 // Do initialization stuff
