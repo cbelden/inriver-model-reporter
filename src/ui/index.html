@@ -26,21 +26,40 @@
         Perform Diff
       </div>
     </div>
-    <div class="ui accordion">
-      <div class="active title">
-        <i class="dropdown icon"></i>
-        ItemName
-      </div>
-      <div class="active content">
-        <div class="">
 
-
+    <div class="ui segment entity" ng-repeat="entity in versionedEntities">
+      <div class="ui grid">
+        <div class="sixteen wide column">
+          <h3>{{entity.Id.current}}</h3>
+        </div>
+        <div class="sixteen wide column">
+          <h4>FieldTypes:</h4>
+          <div class="ui grid field" ng-repeat="field in entity.FieldTypes">
+            <div class="six wide column">
+              {{field.previous.Id}}
+            </div>
+            <div class="four wide column">
+              Id
+            </div>
+            <div class="six wide column">
+              {{field.current.Id}}
+            </div>
+            <div class="six wide column">
+              {{field.previous.DataType}}
+            </div>
+            <div class="four wide column">
+              Data Type
+            </div>
+            <div class="six wide column">
+              {{field.current.DataType}}
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <pre class="ui message">
-      {{diffResults}}
-    </pre>
+
+    <pre class="ui message">{{diffResults}}</pre>
+
 </body>
 
 </html>

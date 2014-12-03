@@ -2,3 +2,29 @@ html body {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   background-color: #FCFCFC;
 }
+
+.entity h3, .entity h4 {
+  margin: 0;
+}
+
+.entity .field {
+  margin: 10px;
+  border: 1px solid #bbb;
+  border-right-style: none;
+}
+
+.entity .field .column {
+  margin: 0;
+  padding: 5px;
+  border-right: 1px solid #bbb;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.entity .field .column:nth-child(3n+1) {
+  text-align: right;
+}
+
+.entity .field .column:nth-child(3n+3) {
+  text-align: left;
+}

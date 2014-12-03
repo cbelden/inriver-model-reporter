@@ -6,6 +6,7 @@ app.controller('modelReporterCtrl', function ($scope) {
   /* ==== Model Variables ==== */
   $scope.previousModelFilename = "";
   $scope.currentModelFilename = "";
+  $scope.versionedEntities = [];
   $scope.diffResults = "";
   $scope.fileDialogOptions = {
     'title': "Select Model File",
@@ -28,17 +29,9 @@ app.controller('modelReporterCtrl', function ($scope) {
     });
   }
 
-  $scope.$watch('previousModelFilename', function () {
-    console.log("previousModelFilename: " + $scope.previousModelFilename);
-  });
-
-  $scope.$watch('currentModelFilename', function () {
-    console.log("currentModelFilename: " + $scope.currentModelFilename);
-  });
-
   /* ==== ipc Handlers ==== */
-
   ipc.on('returnDiffResults', function (results) {
+    $scope.versionedEntities = results;
     $scope.diffResults = util.inspect(results, { depth: 100 });
     $scope.$apply();
   });

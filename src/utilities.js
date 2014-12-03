@@ -51,6 +51,17 @@ var pickExcept = R.curry(function (blacklist, object) {
     );
 });
 
+/**
+ * Returns all keys from the objects provided as arguments.
+ **/
+ var getKeysFromAllObjects = R.pipe(
+   R.unapply(       // The arguments need to enter 'ap' as an array
+     R.ap([R.keys])
+   ),
+   R.flatten,
+   R.uniq
+ );
+
 /* ==== Parsing Helpers ==== */
 
 /**
@@ -72,6 +83,7 @@ module.exports = {
   'tapChain': tapChain,
   'clone': clone,
   'pickExcept': pickExcept,
+  'getKeysFromAllObjects': getKeysFromAllObjects,
 
   //Parsing Helpers
   'parseXMLFile': parseXMLFile
