@@ -2,7 +2,6 @@ var R = require('ramda');
 var Q = require('q');
 var utils = require('../utilities');
 var entity = require('../dataModels/entity');
-var diffTools = require('./diffUtils');
 
 
 /**
@@ -16,14 +15,6 @@ var loadEntityVersions = function (previousFileName, currentFileName) {
 }
 
 /**
- * Returns a pruned diff for the two passed models
- **/
-var getPrunedDiff = R.pipe(
-    diffTools.diffObjects,
-    diffTools.pruneDiff
-);
-
-/**
  * Takes in the name of a field and two entities and returns a new object
  * containing the old and new version of that field.
  **/
@@ -33,7 +24,8 @@ var createVersionedField = R.curry(function (previousEntity, currentEntity, fiel
   if (!R.isArrayLike(previousField) || !R.isArrayLike(currentField)) {
     return {
       previous: previousField,
-      current: currentField
+      current: currentField,
+      changed: previousField == currentField
     }
   }
   var createVersionedFieldItems = R.pipe(
@@ -41,7 +33,8 @@ var createVersionedField = R.curry(function (previousEntity, currentEntity, fiel
     R.map(function (itemPairs) {
       return {
         previous: itemPairs[0],
-        current: itemPairs[1]
+        current: itemPairs[1],
+        changed: itemPairs[0] == itemPairs[1]
       };
     })
   );

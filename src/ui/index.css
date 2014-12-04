@@ -3,26 +3,40 @@ html body {
   background-color: #FCFCFC;
 }
 
+/* ==== Entity Diff Fields ==== */
 .entity h3, .entity h4 {
   margin: 0;
 }
 
 .entity .field {
-  margin: 10px;
   border: 1px solid #bbb;
-  border-right-style: none;
+  border-bottom-style: none;
+}
+
+.entity .field:last-child {
+  border-bottom-style: solid;
+}
+
+.entity .field .property {
+  /*background-color: #9DBC9D;*/
+}
+
+.entity .field .property.changed {
+  background-color: #FDA37E;
 }
 
 .entity .field .column {
-  margin: 0;
-  padding: 5px;
-  border-right: 1px solid #bbb;
-  border-bottom: 1px solid #eee;
-  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .entity .field .column:nth-child(3n+1) {
   text-align: right;
+}
+
+.entity .field .column:nth-child(3n+2) {
+  text-align: center;
+  font-weight: bold;
 }
 
 .entity .field .column:nth-child(3n+3) {

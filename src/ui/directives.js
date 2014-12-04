@@ -52,4 +52,20 @@ app.directive('fileInput', function () {
 
     }
   }
+});
+
+/**
+ *
+ **/
+app.directive('diffRow', function () {
+  return {
+    'restrict': "E",
+    'templateUrl': "./partials/diffRow.html",
+    'scope': {
+      'fieldName': "@",
+      'status': "=",
+      'previousValue': "=",
+      'currentValue': "="
+    }
+  }
 })

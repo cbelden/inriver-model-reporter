@@ -34,25 +34,37 @@
         </div>
         <div class="sixteen wide column">
           <h4>FieldTypes:</h4>
-          <div class="ui grid field" ng-repeat="field in entity.FieldTypes">
-            <div class="six wide column">
-              {{field.previous.Id}}
-            </div>
-            <div class="four wide column">
-              Id
-            </div>
-            <div class="six wide column">
-              {{field.current.Id}}
-            </div>
-            <div class="six wide column">
-              {{field.previous.DataType}}
-            </div>
-            <div class="four wide column">
-              Data Type
-            </div>
-            <div class="six wide column">
-              {{field.current.DataType}}
-            </div>
+          <div class="field" ng-repeat="field in entity.FieldTypes">
+            <diff-row
+              field-name="Id"
+              status="field.changed"
+              previous-value="field.previous.Id"
+              current-value="field.current.Id">
+            </diff-row>
+            <diff-row
+              field-name="Data Type"
+              status="field.changed"
+              previous-value="field.previous.DataType"
+              current-value="field.current.DataType">
+            </diff-row>
+            <diff-row
+              field-name="Category Id"
+              status="field.changed"
+              previous-value="field.previous.CategoryId"
+              current-value="field.current.CategoryId">
+            </diff-row>
+            <diff-row
+              field-name="Read Only"
+              status="field.changed"
+              previous-value="field.previous.ReadOnly"
+              current-value="field.current.ReadOnly">
+            </diff-row>
+            <diff-row
+              field-name="Hidden"
+              status="field.changed"
+              previous-value="field.previous.Hidden"
+              current-value="field.current.Hidden">
+            </diff-row>
           </div>
         </div>
       </div>
