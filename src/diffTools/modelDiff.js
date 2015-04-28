@@ -25,7 +25,7 @@ var createVersionedField = R.curry(function (previousEntity, currentEntity, fiel
     return {
       previous: previousField,
       current: currentField,
-      changed: previousField == currentField
+      changed: JSON.stringify(previousField) !== JSON.stringify(currentField)
     }
   }
   var createVersionedFieldItems = R.pipe(
@@ -34,7 +34,7 @@ var createVersionedField = R.curry(function (previousEntity, currentEntity, fiel
       return {
         previous: itemPairs[0],
         current: itemPairs[1],
-        changed: itemPairs[0] == itemPairs[1]
+        changed: JSON.stringify(itemPairs[0]) !== JSON.stringify(itemPairs[1])
       };
     })
   );
