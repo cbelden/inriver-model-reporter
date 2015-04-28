@@ -17,7 +17,7 @@ var SOURCE_CODE_DIR = "src/";
 var SOURCE_CODE_LIB_DIR = SOURCE_CODE_DIR + "lib/";
 var ATOM_SHELL_DIR = "binaries/";
 var ATOM_SHELL_APP_DIR = ATOM_SHELL_DIR + "resources/default_app/";
-var ATOM_SHELL_EXECUTABLE = ATOM_SHELL_DIR + "atom";
+var ATOM_SHELL_EXECUTABLE = ATOM_SHELL_DIR + "electron";
 var ATOM_SHELL_DEBUG_PORT = 5858;
 
 
@@ -47,7 +47,7 @@ var runAll = function () {
 /* ==== Tasks ==== */
 gulp.task('fetch-atom-shell',
   R.lPartial(fetchAtomShell, {
-    version: '0.17.2',
+    version: '0.25.1',
     outputDir: ATOM_SHELL_DIR
   })
 );
