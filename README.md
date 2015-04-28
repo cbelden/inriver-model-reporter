@@ -16,3 +16,6 @@ You can retrieve the inRiver model files via the web admin interface by
 navigating to ```Server > MODEL``` and choosing to "Download current model". If
 you would just like to experiment with the tool, there are two sample models in
 the ```data/``` directory at the root of the repository.
+
+## Platform
+Built and tested on Windows 8.1 running iojs v.1.5.1
